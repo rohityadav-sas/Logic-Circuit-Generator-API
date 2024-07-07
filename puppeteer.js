@@ -10,7 +10,7 @@ async function image(content) {
     await page.waitForSelector(selector);
     const element = await page.$(selector);
     const boundingbox = await element.boundingBox();
-    const screenshotPath = path.join(__dirname, 'public', 'logic-circuit.png')
+    const screenshotPath = path.join(__dirname, 'public', 'circuit.png')
     await element.screenshot({
         path: screenshotPath, clip: {
             x: -10,
