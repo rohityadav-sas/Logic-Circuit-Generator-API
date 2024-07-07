@@ -2,7 +2,10 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 async function image(content) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
 
     const page = await browser.newPage();
     await page.setContent(content, { waitUntil: 'networkidle0' });
