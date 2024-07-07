@@ -19,7 +19,7 @@ app.get('/home', (req, res) => {
 app.get('/logic-circuit.png', (req, res) => {
     res.setHeader('Content-Disposition', 'attachment; filename=logic-circuit.png'); // Force download with filename
     res.setHeader('Content-Type', 'image/png'); // Set the content type
-    res.sendFile('./public/circuit.png', { root: __dirname });
+    res.sendFile(__dirname + '/public/circuit.png');
 });
 
 app.post('/solve2var', async (req, res) => {
