@@ -3,7 +3,7 @@ const path = require('path');
 
 async function image(content) {
     const browser = await puppeteer.launch({
-        headless: shell,
+        headless: 'shell',
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--enable-gpu']
     });
 
