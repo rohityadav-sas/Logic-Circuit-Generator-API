@@ -12,6 +12,10 @@ app.listen(3000, () => {
     console.log(`Server is running on port 3000`);
 });
 
+app.get('/', () => {
+    res.send("Deployed Successfully");
+})
+
 app.post('/solve2var', async (req, res) => {
     const formData = {
         calctype: 'sop',
