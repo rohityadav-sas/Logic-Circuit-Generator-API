@@ -3,10 +3,10 @@ const app = express();
 const axios = require('axios');
 const cheerio = require('cheerio');
 const image = require('./puppeteer');
+const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
 
 app.listen(3000, () => {
     console.log(`Server is running on port 3000`);
@@ -15,6 +15,12 @@ app.listen(3000, () => {
 app.get('/home', (req, res) => {
     res.send("Deployed Successfully");
 })
+
+app.get('/logic-circuit.png', (req, res) => {
+    res.setHeader('Content-Disposition', 'attachment; filename=logic-circuit.png'); // Force download with filename
+    res.setHeader('Content-Type', 'image/png'); // Set the content type
+    res.sendFile('./public/circuit.png', { root: __dirname });
+});
 
 app.post('/solve2var', async (req, res) => {
     const formData = {
