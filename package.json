@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "reinstall-puppeteer": "npm uninstall puppeteer && npm install puppeteer && npm run dev"
   },
   "keywords": [],
   "author": "",
