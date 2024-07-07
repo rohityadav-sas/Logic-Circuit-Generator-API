@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const path = require('path');
 
 async function image(content) {
     const browser = await puppeteer.launch();
@@ -9,8 +10,9 @@ async function image(content) {
     await page.waitForSelector(selector);
     const element = await page.$(selector);
     const boundingbox = await element.boundingBox();
+    const screenshotPath = path.join(__dirname, 'public', 'logic-circuit.png')
     await element.screenshot({
-        path: './build/logic-circuit.png', clip: {
+        path: screenshotPath, clip: {
             x: -10,
             y: -15,
             width: boundingbox.width,
