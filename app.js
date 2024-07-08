@@ -12,15 +12,9 @@ app.listen(3000, () => {
     console.log(`Server is running on port 3000`);
 });
 
-app.get('/home', (req, res) => {
-    res.send("Deployed Successfully");
+app.get('/', async (req, res) => {
+    console.log('Deployed Successfully');
 })
-
-app.get('/logic-circuit.png', (req, res) => {
-    res.setHeader('Content-Disposition', 'attachment; filename=logic-circuit.png'); // Force download with filename
-    res.setHeader('Content-Type', 'image/png'); // Set the content type
-    res.sendFile(__dirname + '/public/circuit.png');
-});
 
 app.post('/solve2var', async (req, res) => {
     const formData = {
@@ -47,8 +41,8 @@ app.post('/solve2var', async (req, res) => {
     const css = await axios.get('http://www.32x8.com/' + cssUrl);
     const style = `<style>${css.data}</style>`;
     $('head').append(style);
-    image($('html').html());
-    res.send($('html').html());
+    const bufferResult = await image($('html').html());
+    res.send(bufferResult);
 });
 
 app.post('/solve3var', async (req, res) => {
@@ -81,8 +75,8 @@ app.post('/solve3var', async (req, res) => {
     const css = await axios.get('http://www.32x8.com/' + cssUrl);
     const style = `<style>${css.data}</style>`;
     $('head').append(style);
-    image($('html').html());
-    res.send($('html').html());
+    const bufferResult = await image($('html').html());
+    res.send(bufferResult);
 });
 
 app.post('/solve4var', async (req, res) => {
@@ -122,8 +116,8 @@ app.post('/solve4var', async (req, res) => {
     const css = await axios.get('http://www.32x8.com/' + cssUrl);
     const style = `<style>${css.data}</style>`;
     $('head').append(style);
-    image($('html').html());
-    res.send($('html').html());
+    const bufferResult = await image($('html').html());
+    res.send(bufferResult);
 });
 
 app.post('/solve5var', async (req, res) => {
@@ -179,6 +173,6 @@ app.post('/solve5var', async (req, res) => {
     const css = await axios.get('http://www.32x8.com/' + cssUrl);
     const style = `<style>${css.data}</style>`;
     $('head').append(style);
-    image($('html').html());
-    res.send($('html').html());
+    const bufferResult = await image($('html').html());
+    res.send(bufferResult);
 })
