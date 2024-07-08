@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 async function image(content) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     await page.setContent(content, { waitUntil: 'networkidle0' });
     const selector = '#sop div div:nth-child(6) div';
