@@ -4,15 +4,11 @@ This Node.js application provides endpoints to solve K-Map and return logic circ
 
 ## Table of Contents
 
-- [Preview](#preview)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Endpoints](#endpoints)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
-
-## Preview
-![preview.png](./assets/preview.png?raw=true)
 
 ## Installation
 
