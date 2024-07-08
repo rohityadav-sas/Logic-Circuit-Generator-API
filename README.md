@@ -33,6 +33,7 @@ This Node.js application provides endpoints to solve K-Map and return logic circ
 3. Start the server:
     ```bash
     npm start
+    ```
 
 ## Usage
 
