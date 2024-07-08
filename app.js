@@ -12,7 +12,7 @@ app.listen(3000, () => {
     console.log(`Server is running on port 3000`);
 });
 
-app.get('/', async (req, res) => {
+app.get('/home', async (req, res) => {
     console.log('Deployed Successfully');
 })
 
