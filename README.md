@@ -45,13 +45,13 @@ The server will be running on `http://localhost:3000`. You can use tools like `c
 - **Solve 2 Variables**:
 
     ```bash
-    curl --json "{\"minterms\":[\"1\",\"3\"]}" http://localhost:3000/solve2var
+    curl -X POST -H "Content-Type:application/json" -d "{\"minterms\":[\"0\",\"3\"]}" http://localhost:3000/solve2var -o logic-circuit.jpg
     ```
 
 - **Solve 3 Variables**:
 
     ```bash
-    curl --json "{\"minterms\":[\"1\",\"3\",\"5\"]}" http://localhost:3000/solve3var
+    curl -X POST -H "Content-Type:application/json" -d "{\"minterms\":[\"1\",\"3\",\"5\"]}" http://localhost:3000/solve3var -o logic-circuit.jpg
     ```
 
 ## Endpoints
