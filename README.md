@@ -60,7 +60,7 @@ The server will be running on `http://localhost:3000`. You can use tools like `c
     
     + Using Powershell:
         ```bash
-        curl.exe -X POST -H "Content-Type:application/json" -d '{\"minterms\":[\"1\",\"3\",\"5\"]}' http://localhost:3000/solve3var -o logic-circuit.jpg
+        curl.exe -X POST -H 'Content-Type:application/json' -d '{\"minterms\":[\"1\",\"3\",\"5\"]}' http://localhost:3000/solve3var -o logic-circuit.jpg
 
 ## Endpoints
 
