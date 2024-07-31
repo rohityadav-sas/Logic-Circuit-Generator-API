@@ -16,10 +16,12 @@ This Node.js application provides endpoints to solve K-Map and return logic circ
 
     ```bash
     https://github.com/rohityadav-sas/Logic-Circuit-Generator-API
+    ```
 
 2. Navigate to the source directory:
     ```bash
     cd Logic-Circuit-Generator-API
+    ```
 
 2. Install the dependencies:
     ```bash
@@ -29,6 +31,7 @@ This Node.js application provides endpoints to solve K-Map and return logic circ
 3. Start the server:
     ```bash
     npm start
+    ```
 
 ## Usage
 
@@ -47,20 +50,24 @@ The server will be running on `http://localhost:3000`. You can use tools like `c
 
         ```bash
         curl -X POST -H "Content-Type:application/json" -d "{\"minterms\":[\"0\",\"3\"]}" http://localhost:3000/solve2var -o logic-circuit.jpg
+        ```
 
     + Using Powershell:
         ```bash
         curl.exe -X POST -H 'Content-Type:application/json' -d '{\"minterms\":[\"0\",\"3\"]}' http://localhost:3000/solve2var -o logic-circuit.jpg
+        ```
 
 - **Solve 3 Variables**:
     + Using CMD:
 
         ```bash
         curl -X POST -H "Content-Type:application/json" -d "{\"minterms\":[\"1\",\"3\",\"5\"]}" http://localhost:3000/solve3var -o logic-circuit.jpg
+        ```
     
     + Using Powershell:
         ```bash
         curl.exe -X POST -H 'Content-Type:application/json' -d '{\"minterms\":[\"1\",\"3\",\"5\"]}' http://localhost:3000/solve3var -o logic-circuit.jpg
+        ```
 
 ## Endpoints
 
