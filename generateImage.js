@@ -23,6 +23,8 @@ async function generateImage(content) {
         return buffer;
     } catch (error) {
         console.error('An error occurred while generating the image:');
+        console.log(error);
+
     }
 }
 
