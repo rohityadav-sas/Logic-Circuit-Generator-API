@@ -81,17 +81,21 @@ The server will be running on `http://localhost:3000`. You can use tools like `c
 
 - **POST /solve5var**: Accepts a list of minterms for 5 variables and returns the buffer result.
 
-## Project Structure
+## Dependencies
 
-- **app.js**: Main application file that sets up the Express server and routes.
-- **createPullRequest.js**: Handles the creation of a pull request to the external service.
-- **generateBuffer.js**: Generates a buffer from the HTML response using Cheerio and Axios.
-- **generateImage.js**: Uses Puppeteer to generate an image from the HTML content.
+- ***axios***: For making HTTP requests.
 
+- ***cheerio***: For parsing HTML and extracting data.
+
+- ***express***: For handling HTTP requests.
+
+- ***puppeteer***: For headless browser automation and web scraping.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the ISC License. See the [LICENSE](./LICENSE) file for details.
 
 ## Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 

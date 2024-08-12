@@ -1,20 +1,23 @@
 {
-  "name": "new-folder",
+  "name": "logic-circuit-generator-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "k-map-solver",
+    "logic-circuit-generator-api",
+    "rest-api"
+  ],
+  "author": "Rohit Kumar",
   "license": "ISC",
-  "description": "",
+  "description": "A Node.js application that generates logic circuits by solving K-Map and provides the results via RESTful endpoints.",
   "dependencies": {
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
-    "concurrently": "^8.2.2",
     "express": "^4.19.2",
-    "nodemon": "^3.1.4",
     "puppeteer": "^22.12.1"
   }
 }
