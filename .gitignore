@@ -1,4 +1,3 @@
 node_modules
-package-lock.json
 .cache/puppeteer/chrome
 .cache/puppeteer/chrome-headless-shell
